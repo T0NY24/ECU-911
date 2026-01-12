@@ -1,5 +1,6 @@
 {
   "tasa_llegada_lambda": [8968.8667],
+  "total_incidentes": [269066],
   "distribucion_tipos": [
     {
       "tipo_servicio": "Gestión Sanitaria",
@@ -1153,10 +1154,48 @@
       "prob": 0.0002
     }
   ],
-  "total_eventos": [269066],
+  "distribucion_dia_semana": [
+    {
+      "dia_semana": "Friday",
+      "n": 36444,
+      "prob": 0.1354
+    },
+    {
+      "dia_semana": "Monday",
+      "n": 32877,
+      "prob": 0.1222
+    },
+    {
+      "dia_semana": "Saturday",
+      "n": 50763,
+      "prob": 0.1887
+    },
+    {
+      "dia_semana": "Sunday",
+      "n": 54880,
+      "prob": 0.204
+    },
+    {
+      "dia_semana": "Thursday",
+      "n": 32401,
+      "prob": 0.1204
+    },
+    {
+      "dia_semana": "Tuesday",
+      "n": 30209,
+      "prob": 0.1123
+    },
+    {
+      "dia_semana": "Wednesday",
+      "n": 31492,
+      "prob": 0.117
+    }
+  ],
   "periodo": {
     "inicio": ["2025-11-01"],
-    "fin": ["2025-11-30"]
+    "fin": ["2025-11-30"],
+    "total_dias": [30]
   },
-  "validado": [true]
+  "validado": [true],
+  "nota": ["Parámetros basados en datos reales sin simulación de hora"]
 }

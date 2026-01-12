@@ -45,4 +45,25 @@ g4 <- data %>%
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ggsave("figures/04_heatmap.png", plot = g4)
 
-print("Gráficos generados.")
+# Gráfico 5: Distribución por Día de la Semana (nuevo, para análisis diario real)
+g5 <- data %>%
+  count(dia_semana) %>%
+  ggplot(aes(x = dia_semana, y = n)) +
+  geom_col(fill = "darkred") +
+  labs(title = "Distribución de Incidentes por Día de la Semana", x = "Día", y = "Cantidad") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+ggsave("figures/05_distribucion_dia_semana.png", plot = g5)
+
+# Gráfico 6: Tendencia temporal (por semana)
+g6 <- data %>%
+  mutate(semana = lubridate::week(fecha)) %>%
+  count(semana) %>%
+  ggplot(aes(x = semana, y = n)) +
+  geom_line(color = "darkgreen", size = 1) +
+  geom_point() +
+  labs(title = "Tendencia de Incidentes por Semana", x = "Semana", y = "Cantidad") +
+  theme_minimal()
+ggsave("figures/06_tendencia_semanal.png", plot = g6)
+
+print("Gráficos generados sin análisis de hora simulada.")
