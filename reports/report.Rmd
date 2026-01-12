@@ -1,0 +1,96 @@
+---
+title: "Avance Proyecto: Análisis ECU 911"
+author: "Grupo 3: Anthony Perez, Franco Quezada, Ricardo Rios"
+date: "2026-01-11"
+output: html_document
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+library(tidyverse)
+library(jsonlite)
+```
+
+# 1. Introducción y Limpieza de Datos
+
+El objetivo de este avance es procesar los datos de llamadas de
+emergencia del ECU 911 (Noviembre 2025) para parametrizar el modelo de
+simulación.
+
+Se realizó la limpieza del dataset original:
+
+-   Se estandarizaron los nombres de columnas.
+-   Se formatearon las fechas.
+
+**Nota:** Dado que la base pública original carecía de hora específica,
+se simuló la hora de llegada para cumplir con los requisitos de análisis
+temporal.
+
+# 2. Análisis Visual (Gráficos)
+
+A continuación se presentan los patrones de comportamiento de las
+emergencias, basados en las imágenes generadas en la carpeta `/figures`.
+
+## 2.1 Demanda en el tiempo
+
+Comportamiento de la llegada de incidentes por hora del día.
+
+```{r demanda-tiempo, fig.align='center', out.width='80%'}
+# Cargamos la imagen ya generada
+knitr::include_graphics("../figures/01_demanda_tiempo.png")
+```
+
+## 2.2 Distribución por Tipo de Servicio
+
+Frecuencia de incidentes según la categoría principal (Salud, Policía,
+etc.).
+
+```{r distribucion-tipo, fig.align='center', out.width='80%'}
+knitr::include_graphics("../figures/02_distribucion_tipo.png")
+```
+
+## 2.3 Top 10 Subtipos de Emergencia
+
+Los incidentes específicos más frecuentes.
+
+```{r top-subtipos, fig.align='center', out.width='80%'}
+knitr::include_graphics("../figures/03_comparacion_subtipo.png")
+```
+
+## 2.4 Mapa de Calor (Heatmap)
+
+Intensidad de emergencias cruzando Hora del día vs. Día de la semana.
+
+```{r heatmap, fig.align='center', out.width='80%'}
+knitr::include_graphics("../figures/04_heatmap.png")
+```
+
+# 3. Parámetros del Modelo
+
+Estos valores han sido calculados en `src/03_parametros.R` y exportados
+a `data/params.json` para alimentar la futura simulación.
+
+```{r cargar-parametros}
+# Leemos los parámetros generados (usamos ../ porque el reporte está en una subcarpeta)
+params <- fromJSON("../data/params.json")
+```
+
+Los valores clave del modelo son:
+
+-   **Tasa de llegadas global (Lambda):**
+    `r round(params$tasa_llegada_lambda, 2)` llamadas/hora
+-   **Tiempo promedio de atención (Supuesto):**
+    `r params$tiempos_atencion$promedio_atencion_minutos` minutos
+-   **Validación de datos automática:** `r params$validacion_ok`
+
+# 4. Conclusiones del Avance
+
+-   Se ha logrado limpiar la base de datos y generar un archivo
+    `dataset_limpio.csv` estructurado.
+-   Las visualizaciones permiten identificar horas pico y los incidentes
+    más comunes.
+-   Los parámetros de entrada para la simulación (tasas y
+    probabilidades) están listos.

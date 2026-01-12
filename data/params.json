@@ -1,0 +1,1162 @@
+{
+  "tasa_llegada_lambda": [8968.8667],
+  "distribucion_tipos": [
+    {
+      "tipo_servicio": "Gestión Sanitaria",
+      "n": 32434,
+      "prob": 0.1205
+    },
+    {
+      "tipo_servicio": "Gestión de Riesgos",
+      "n": 1007,
+      "prob": 0.0037
+    },
+    {
+      "tipo_servicio": "Gestión de Siniestros",
+      "n": 4354,
+      "prob": 0.0162
+    },
+    {
+      "tipo_servicio": "Seguridad Ciudadana",
+      "n": 181765,
+      "prob": 0.6755
+    },
+    {
+      "tipo_servicio": "Servicio Militar",
+      "n": 4185,
+      "prob": 0.0156
+    },
+    {
+      "tipo_servicio": "Servicios Municipales",
+      "n": 10541,
+      "prob": 0.0392
+    },
+    {
+      "tipo_servicio": "Tránsito y Movilidad",
+      "n": 34780,
+      "prob": 0.1293
+    }
+  ],
+  "distribucion_cantones": [
+    {
+      "canton": "24 DE MAYO",
+      "n": 66,
+      "prob": 0.0002
+    },
+    {
+      "canton": "AGUARICO",
+      "n": 16,
+      "prob": 0.0001
+    },
+    {
+      "canton": "ALAUSI",
+      "n": 207,
+      "prob": 0.0008
+    },
+    {
+      "canton": "ALFREDO BAQUERIZO MORENO",
+      "n": 337,
+      "prob": 0.0013
+    },
+    {
+      "canton": "AMBATO",
+      "n": 9124,
+      "prob": 0.0339
+    },
+    {
+      "canton": "ANTONIO ANTE",
+      "n": 815,
+      "prob": 0.003
+    },
+    {
+      "canton": "ARAJUNO",
+      "n": 59,
+      "prob": 0.0002
+    },
+    {
+      "canton": "ARCHIDONA",
+      "n": 285,
+      "prob": 0.0011
+    },
+    {
+      "canton": "ARENILLAS",
+      "n": 421,
+      "prob": 0.0016
+    },
+    {
+      "canton": "ATACAMES",
+      "n": 745,
+      "prob": 0.0028
+    },
+    {
+      "canton": "ATAHUALPA",
+      "n": 59,
+      "prob": 0.0002
+    },
+    {
+      "canton": "AZOGUES",
+      "n": 1129,
+      "prob": 0.0042
+    },
+    {
+      "canton": "BABA",
+      "n": 232,
+      "prob": 0.0009
+    },
+    {
+      "canton": "BABAHOYO",
+      "n": 2969,
+      "prob": 0.011
+    },
+    {
+      "canton": "BALAO",
+      "n": 121,
+      "prob": 0.0004
+    },
+    {
+      "canton": "BALSAS",
+      "n": 96,
+      "prob": 0.0004
+    },
+    {
+      "canton": "BALZAR",
+      "n": 657,
+      "prob": 0.0024
+    },
+    {
+      "canton": "BAÑOS DE AGUA SANTA",
+      "n": 585,
+      "prob": 0.0022
+    },
+    {
+      "canton": "BIBLIAN",
+      "n": 177,
+      "prob": 0.0007
+    },
+    {
+      "canton": "BOLIVAR",
+      "n": 371,
+      "prob": 0.0014
+    },
+    {
+      "canton": "BUENA FE",
+      "n": 916,
+      "prob": 0.0034
+    },
+    {
+      "canton": "CALUMA",
+      "n": 257,
+      "prob": 0.001
+    },
+    {
+      "canton": "CALVAS",
+      "n": 265,
+      "prob": 0.001
+    },
+    {
+      "canton": "CAMILO PONCE ENRIQUEZ",
+      "n": 229,
+      "prob": 0.0009
+    },
+    {
+      "canton": "CARLOS JULIO AROSEMENA TOLA",
+      "n": 32,
+      "prob": 0.0001
+    },
+    {
+      "canton": "CASCALES",
+      "n": 215,
+      "prob": 0.0008
+    },
+    {
+      "canton": "CATAMAYO",
+      "n": 564,
+      "prob": 0.0021
+    },
+    {
+      "canton": "CAYAMBE",
+      "n": 1012,
+      "prob": 0.0038
+    },
+    {
+      "canton": "CAÑAR",
+      "n": 310,
+      "prob": 0.0012
+    },
+    {
+      "canton": "CELICA",
+      "n": 132,
+      "prob": 0.0005
+    },
+    {
+      "canton": "CENTINELA DEL CONDOR",
+      "n": 131,
+      "prob": 0.0005
+    },
+    {
+      "canton": "CEVALLOS",
+      "n": 166,
+      "prob": 0.0006
+    },
+    {
+      "canton": "CHAGUARPAMBA",
+      "n": 40,
+      "prob": 0.0001
+    },
+    {
+      "canton": "CHAMBO",
+      "n": 111,
+      "prob": 0.0004
+    },
+    {
+      "canton": "CHILLA",
+      "n": 13,
+      "prob": 0
+    },
+    {
+      "canton": "CHILLANES",
+      "n": 161,
+      "prob": 0.0006
+    },
+    {
+      "canton": "CHIMBO",
+      "n": 218,
+      "prob": 0.0008
+    },
+    {
+      "canton": "CHINCHIPE",
+      "n": 130,
+      "prob": 0.0005
+    },
+    {
+      "canton": "CHONE",
+      "n": 955,
+      "prob": 0.0035
+    },
+    {
+      "canton": "CHORDELEG",
+      "n": 81,
+      "prob": 0.0003
+    },
+    {
+      "canton": "CHUNCHI",
+      "n": 108,
+      "prob": 0.0004
+    },
+    {
+      "canton": "COLIMES",
+      "n": 106,
+      "prob": 0.0004
+    },
+    {
+      "canton": "COLTA",
+      "n": 177,
+      "prob": 0.0007
+    },
+    {
+      "canton": "COTACACHI",
+      "n": 411,
+      "prob": 0.0015
+    },
+    {
+      "canton": "CRNEL. MARCELINO MARIDUEÑA",
+      "n": 163,
+      "prob": 0.0006
+    },
+    {
+      "canton": "CUENCA",
+      "n": 14249,
+      "prob": 0.053
+    },
+    {
+      "canton": "CUMANDA",
+      "n": 153,
+      "prob": 0.0006
+    },
+    {
+      "canton": "CUYABENO",
+      "n": 164,
+      "prob": 0.0006
+    },
+    {
+      "canton": "DAULE",
+      "n": 2120,
+      "prob": 0.0079
+    },
+    {
+      "canton": "DELEG",
+      "n": 80,
+      "prob": 0.0003
+    },
+    {
+      "canton": "DURAN",
+      "n": 3849,
+      "prob": 0.0143
+    },
+    {
+      "canton": "ECHEANDIA",
+      "n": 349,
+      "prob": 0.0013
+    },
+    {
+      "canton": "EL CARMEN",
+      "n": 637,
+      "prob": 0.0024
+    },
+    {
+      "canton": "EL CHACO",
+      "n": 93,
+      "prob": 0.0003
+    },
+    {
+      "canton": "EL GUABO",
+      "n": 773,
+      "prob": 0.0029
+    },
+    {
+      "canton": "EL PAN",
+      "n": 8,
+      "prob": 0
+    },
+    {
+      "canton": "EL PANGUI",
+      "n": 268,
+      "prob": 0.001
+    },
+    {
+      "canton": "EL PIEDRERO",
+      "n": 19,
+      "prob": 0.0001
+    },
+    {
+      "canton": "EL TAMBO",
+      "n": 74,
+      "prob": 0.0003
+    },
+    {
+      "canton": "EL TRIUNFO",
+      "n": 607,
+      "prob": 0.0023
+    },
+    {
+      "canton": "ELOY ALFARO",
+      "n": 520,
+      "prob": 0.0019
+    },
+    {
+      "canton": "EMPALME",
+      "n": 877,
+      "prob": 0.0033
+    },
+    {
+      "canton": "ESMERALDAS",
+      "n": 3012,
+      "prob": 0.0112
+    },
+    {
+      "canton": "ESPEJO",
+      "n": 167,
+      "prob": 0.0006
+    },
+    {
+      "canton": "ESPINDOLA",
+      "n": 89,
+      "prob": 0.0003
+    },
+    {
+      "canton": "FLAVIO ALFARO",
+      "n": 104,
+      "prob": 0.0004
+    },
+    {
+      "canton": "GIRON",
+      "n": 141,
+      "prob": 0.0005
+    },
+    {
+      "canton": "GNRAL. ANTONIO ELIZALDE",
+      "n": 168,
+      "prob": 0.0006
+    },
+    {
+      "canton": "GONZALO PIZARRO",
+      "n": 239,
+      "prob": 0.0009
+    },
+    {
+      "canton": "GONZANAMA",
+      "n": 80,
+      "prob": 0.0003
+    },
+    {
+      "canton": "GUACHAPALA",
+      "n": 7,
+      "prob": 0
+    },
+    {
+      "canton": "GUALACEO",
+      "n": 473,
+      "prob": 0.0018
+    },
+    {
+      "canton": "GUALAQUIZA",
+      "n": 277,
+      "prob": 0.001
+    },
+    {
+      "canton": "GUAMOTE",
+      "n": 177,
+      "prob": 0.0007
+    },
+    {
+      "canton": "GUANO",
+      "n": 451,
+      "prob": 0.0017
+    },
+    {
+      "canton": "GUARANDA",
+      "n": 1466,
+      "prob": 0.0054
+    },
+    {
+      "canton": "GUAYAQUIL",
+      "n": 49850,
+      "prob": 0.1853
+    },
+    {
+      "canton": "HUAMBOYA",
+      "n": 222,
+      "prob": 0.0008
+    },
+    {
+      "canton": "HUAQUILLAS",
+      "n": 732,
+      "prob": 0.0027
+    },
+    {
+      "canton": "IBARRA",
+      "n": 6665,
+      "prob": 0.0248
+    },
+    {
+      "canton": "ISABELA",
+      "n": 94,
+      "prob": 0.0003
+    },
+    {
+      "canton": "ISIDRO AYORA",
+      "n": 132,
+      "prob": 0.0005
+    },
+    {
+      "canton": "JAMA",
+      "n": 57,
+      "prob": 0.0002
+    },
+    {
+      "canton": "JARAMIJO",
+      "n": 200,
+      "prob": 0.0007
+    },
+    {
+      "canton": "JIPIJAPA",
+      "n": 456,
+      "prob": 0.0017
+    },
+    {
+      "canton": "JUNIN",
+      "n": 60,
+      "prob": 0.0002
+    },
+    {
+      "canton": "LA CONCORDIA",
+      "n": 982,
+      "prob": 0.0036
+    },
+    {
+      "canton": "LA JOYA DE LOS SACHAS",
+      "n": 394,
+      "prob": 0.0015
+    },
+    {
+      "canton": "LA LIBERTAD",
+      "n": 1209,
+      "prob": 0.0045
+    },
+    {
+      "canton": "LA MANA",
+      "n": 793,
+      "prob": 0.0029
+    },
+    {
+      "canton": "LA TRONCAL",
+      "n": 827,
+      "prob": 0.0031
+    },
+    {
+      "canton": "LAGO AGRIO",
+      "n": 2577,
+      "prob": 0.0096
+    },
+    {
+      "canton": "LAS GOLONDRINAS",
+      "n": 22,
+      "prob": 0.0001
+    },
+    {
+      "canton": "LAS LAJAS",
+      "n": 25,
+      "prob": 0.0001
+    },
+    {
+      "canton": "LAS NAVES",
+      "n": 148,
+      "prob": 0.0006
+    },
+    {
+      "canton": "LATACUNGA",
+      "n": 3794,
+      "prob": 0.0141
+    },
+    {
+      "canton": "LIMON INDANZA",
+      "n": 167,
+      "prob": 0.0006
+    },
+    {
+      "canton": "LOGROÐO",
+      "n": 98,
+      "prob": 0.0004
+    },
+    {
+      "canton": "LOJA",
+      "n": 5385,
+      "prob": 0.02
+    },
+    {
+      "canton": "LOMAS DE SARGENTILLO",
+      "n": 161,
+      "prob": 0.0006
+    },
+    {
+      "canton": "LORETO",
+      "n": 243,
+      "prob": 0.0009
+    },
+    {
+      "canton": "MACARA",
+      "n": 247,
+      "prob": 0.0009
+    },
+    {
+      "canton": "MACHALA",
+      "n": 5064,
+      "prob": 0.0188
+    },
+    {
+      "canton": "MANTA",
+      "n": 3202,
+      "prob": 0.0119
+    },
+    {
+      "canton": "MARCABELI",
+      "n": 89,
+      "prob": 0.0003
+    },
+    {
+      "canton": "MEJIA",
+      "n": 2508,
+      "prob": 0.0093
+    },
+    {
+      "canton": "MERA",
+      "n": 237,
+      "prob": 0.0009
+    },
+    {
+      "canton": "MILAGRO",
+      "n": 2340,
+      "prob": 0.0087
+    },
+    {
+      "canton": "MIRA",
+      "n": 121,
+      "prob": 0.0004
+    },
+    {
+      "canton": "MOCACHE",
+      "n": 291,
+      "prob": 0.0011
+    },
+    {
+      "canton": "MOCHA",
+      "n": 105,
+      "prob": 0.0004
+    },
+    {
+      "canton": "MONTALVO",
+      "n": 362,
+      "prob": 0.0013
+    },
+    {
+      "canton": "MONTECRISTI",
+      "n": 721,
+      "prob": 0.0027
+    },
+    {
+      "canton": "MONTUFAR",
+      "n": 433,
+      "prob": 0.0016
+    },
+    {
+      "canton": "MORONA",
+      "n": 1962,
+      "prob": 0.0073
+    },
+    {
+      "canton": "MUISNE",
+      "n": 194,
+      "prob": 0.0007
+    },
+    {
+      "canton": "NABON",
+      "n": 105,
+      "prob": 0.0004
+    },
+    {
+      "canton": "NANGARITZA",
+      "n": 65,
+      "prob": 0.0002
+    },
+    {
+      "canton": "NARANJAL",
+      "n": 1269,
+      "prob": 0.0047
+    },
+    {
+      "canton": "NARANJITO",
+      "n": 388,
+      "prob": 0.0014
+    },
+    {
+      "canton": "NOBOL",
+      "n": 453,
+      "prob": 0.0017
+    },
+    {
+      "canton": "OLMEDO",
+      "n": 47,
+      "prob": 0.0002
+    },
+    {
+      "canton": "ORELLANA",
+      "n": 1719,
+      "prob": 0.0064
+    },
+    {
+      "canton": "OTAVALO",
+      "n": 1466,
+      "prob": 0.0054
+    },
+    {
+      "canton": "OÑA",
+      "n": 24,
+      "prob": 0.0001
+    },
+    {
+      "canton": "PABLO SEXTO",
+      "n": 42,
+      "prob": 0.0002
+    },
+    {
+      "canton": "PAJAN",
+      "n": 164,
+      "prob": 0.0006
+    },
+    {
+      "canton": "PALANDA",
+      "n": 90,
+      "prob": 0.0003
+    },
+    {
+      "canton": "PALENQUE",
+      "n": 81,
+      "prob": 0.0003
+    },
+    {
+      "canton": "PALESTINA",
+      "n": 136,
+      "prob": 0.0005
+    },
+    {
+      "canton": "PALLATANGA",
+      "n": 106,
+      "prob": 0.0004
+    },
+    {
+      "canton": "PALORA",
+      "n": 231,
+      "prob": 0.0009
+    },
+    {
+      "canton": "PALTAS",
+      "n": 151,
+      "prob": 0.0006
+    },
+    {
+      "canton": "PANGUA",
+      "n": 90,
+      "prob": 0.0003
+    },
+    {
+      "canton": "PAQUISHA",
+      "n": 95,
+      "prob": 0.0004
+    },
+    {
+      "canton": "PASAJE",
+      "n": 1323,
+      "prob": 0.0049
+    },
+    {
+      "canton": "PASTAZA",
+      "n": 1600,
+      "prob": 0.0059
+    },
+    {
+      "canton": "PATATE",
+      "n": 114,
+      "prob": 0.0004
+    },
+    {
+      "canton": "PAUTE",
+      "n": 220,
+      "prob": 0.0008
+    },
+    {
+      "canton": "PEDERNALES",
+      "n": 550,
+      "prob": 0.002
+    },
+    {
+      "canton": "PEDRO CARBO",
+      "n": 622,
+      "prob": 0.0023
+    },
+    {
+      "canton": "PEDRO MONCAYO",
+      "n": 505,
+      "prob": 0.0019
+    },
+    {
+      "canton": "PEDRO VICENTE MALDONADO",
+      "n": 102,
+      "prob": 0.0004
+    },
+    {
+      "canton": "PENIPE",
+      "n": 84,
+      "prob": 0.0003
+    },
+    {
+      "canton": "PICHINCHA",
+      "n": 78,
+      "prob": 0.0003
+    },
+    {
+      "canton": "PIMAMPIRO",
+      "n": 212,
+      "prob": 0.0008
+    },
+    {
+      "canton": "PINDAL",
+      "n": 82,
+      "prob": 0.0003
+    },
+    {
+      "canton": "PIÑAS",
+      "n": 294,
+      "prob": 0.0011
+    },
+    {
+      "canton": "PLAYAS",
+      "n": 647,
+      "prob": 0.0024
+    },
+    {
+      "canton": "PORTOVELO",
+      "n": 203,
+      "prob": 0.0008
+    },
+    {
+      "canton": "PORTOVIEJO",
+      "n": 3309,
+      "prob": 0.0123
+    },
+    {
+      "canton": "PUCARA",
+      "n": 40,
+      "prob": 0.0001
+    },
+    {
+      "canton": "PUEBLOVIEJO",
+      "n": 426,
+      "prob": 0.0016
+    },
+    {
+      "canton": "PUERTO LOPEZ",
+      "n": 111,
+      "prob": 0.0004
+    },
+    {
+      "canton": "PUERTO QUITO",
+      "n": 149,
+      "prob": 0.0006
+    },
+    {
+      "canton": "PUJILI",
+      "n": 635,
+      "prob": 0.0024
+    },
+    {
+      "canton": "PUTUMAYO",
+      "n": 186,
+      "prob": 0.0007
+    },
+    {
+      "canton": "PUYANGO",
+      "n": 87,
+      "prob": 0.0003
+    },
+    {
+      "canton": "QUERO",
+      "n": 152,
+      "prob": 0.0006
+    },
+    {
+      "canton": "QUEVEDO",
+      "n": 2669,
+      "prob": 0.0099
+    },
+    {
+      "canton": "QUIJOS",
+      "n": 116,
+      "prob": 0.0004
+    },
+    {
+      "canton": "QUILANGA",
+      "n": 67,
+      "prob": 0.0002
+    },
+    {
+      "canton": "QUININDE",
+      "n": 1264,
+      "prob": 0.0047
+    },
+    {
+      "canton": "QUINSALOMA",
+      "n": 172,
+      "prob": 0.0006
+    },
+    {
+      "canton": "QUITO",
+      "n": 57059,
+      "prob": 0.2121
+    },
+    {
+      "canton": "RIOBAMBA",
+      "n": 5712,
+      "prob": 0.0212
+    },
+    {
+      "canton": "RIOVERDE",
+      "n": 291,
+      "prob": 0.0011
+    },
+    {
+      "canton": "ROCAFUERTE",
+      "n": 235,
+      "prob": 0.0009
+    },
+    {
+      "canton": "RUMIÑAHUI",
+      "n": 2647,
+      "prob": 0.0098
+    },
+    {
+      "canton": "SALCEDO",
+      "n": 844,
+      "prob": 0.0031
+    },
+    {
+      "canton": "SALINAS",
+      "n": 1041,
+      "prob": 0.0039
+    },
+    {
+      "canton": "SALITRE",
+      "n": 239,
+      "prob": 0.0009
+    },
+    {
+      "canton": "SAMBORONDON",
+      "n": 1580,
+      "prob": 0.0059
+    },
+    {
+      "canton": "SAN CRISTOBAL",
+      "n": 410,
+      "prob": 0.0015
+    },
+    {
+      "canton": "SAN FERNANDO",
+      "n": 21,
+      "prob": 0.0001
+    },
+    {
+      "canton": "SAN JACINTO DE YAGUACHI",
+      "n": 1004,
+      "prob": 0.0037
+    },
+    {
+      "canton": "SAN JUAN BOSCO",
+      "n": 27,
+      "prob": 0.0001
+    },
+    {
+      "canton": "SAN LORENZO",
+      "n": 529,
+      "prob": 0.002
+    },
+    {
+      "canton": "SAN MIGUEL",
+      "n": 402,
+      "prob": 0.0015
+    },
+    {
+      "canton": "SAN MIGUEL DE LOS BANCOS",
+      "n": 115,
+      "prob": 0.0004
+    },
+    {
+      "canton": "SAN MIGUEL DE URCUQUI",
+      "n": 222,
+      "prob": 0.0008
+    },
+    {
+      "canton": "SAN PEDRO DE HUACA",
+      "n": 136,
+      "prob": 0.0005
+    },
+    {
+      "canton": "SAN PEDRO DE PELILEO",
+      "n": 610,
+      "prob": 0.0023
+    },
+    {
+      "canton": "SAN VICENTE",
+      "n": 136,
+      "prob": 0.0005
+    },
+    {
+      "canton": "SANTA ANA",
+      "n": 140,
+      "prob": 0.0005
+    },
+    {
+      "canton": "SANTA CLARA",
+      "n": 38,
+      "prob": 0.0001
+    },
+    {
+      "canton": "SANTA CRUZ",
+      "n": 476,
+      "prob": 0.0018
+    },
+    {
+      "canton": "SANTA ELENA",
+      "n": 1645,
+      "prob": 0.0061
+    },
+    {
+      "canton": "SANTA ISABEL",
+      "n": 209,
+      "prob": 0.0008
+    },
+    {
+      "canton": "SANTA LUCIA",
+      "n": 174,
+      "prob": 0.0006
+    },
+    {
+      "canton": "SANTA ROSA",
+      "n": 1230,
+      "prob": 0.0046
+    },
+    {
+      "canton": "SANTIAGO",
+      "n": 138,
+      "prob": 0.0005
+    },
+    {
+      "canton": "SANTIAGO DE PILLARO",
+      "n": 477,
+      "prob": 0.0018
+    },
+    {
+      "canton": "SANTO DOMINGO",
+      "n": 8165,
+      "prob": 0.0303
+    },
+    {
+      "canton": "SAQUISILI",
+      "n": 292,
+      "prob": 0.0011
+    },
+    {
+      "canton": "SARAGURO",
+      "n": 189,
+      "prob": 0.0007
+    },
+    {
+      "canton": "SEVILLA DE ORO",
+      "n": 13,
+      "prob": 0
+    },
+    {
+      "canton": "SEVILLA DON BOSCO",
+      "n": 284,
+      "prob": 0.0011
+    },
+    {
+      "canton": "SHUSHUFINDI",
+      "n": 749,
+      "prob": 0.0028
+    },
+    {
+      "canton": "SIGCHOS",
+      "n": 115,
+      "prob": 0.0004
+    },
+    {
+      "canton": "SIGSIG",
+      "n": 159,
+      "prob": 0.0006
+    },
+    {
+      "canton": "SIMON BOLIVAR",
+      "n": 181,
+      "prob": 0.0007
+    },
+    {
+      "canton": "SOZORANGA",
+      "n": 11,
+      "prob": 0
+    },
+    {
+      "canton": "SUCRE",
+      "n": 350,
+      "prob": 0.0013
+    },
+    {
+      "canton": "SUCUA",
+      "n": 479,
+      "prob": 0.0018
+    },
+    {
+      "canton": "SUCUMBIOS",
+      "n": 7,
+      "prob": 0
+    },
+    {
+      "canton": "SUSCAL",
+      "n": 25,
+      "prob": 0.0001
+    },
+    {
+      "canton": "TAISHA",
+      "n": 154,
+      "prob": 0.0006
+    },
+    {
+      "canton": "TENA",
+      "n": 894,
+      "prob": 0.0033
+    },
+    {
+      "canton": "TISALEO",
+      "n": 166,
+      "prob": 0.0006
+    },
+    {
+      "canton": "TIWINTZA",
+      "n": 55,
+      "prob": 0.0002
+    },
+    {
+      "canton": "TOSAGUA",
+      "n": 215,
+      "prob": 0.0008
+    },
+    {
+      "canton": "TULCAN",
+      "n": 2307,
+      "prob": 0.0086
+    },
+    {
+      "canton": "URDANETA",
+      "n": 323,
+      "prob": 0.0012
+    },
+    {
+      "canton": "VALENCIA",
+      "n": 348,
+      "prob": 0.0013
+    },
+    {
+      "canton": "VENTANAS",
+      "n": 942,
+      "prob": 0.0035
+    },
+    {
+      "canton": "VINCES",
+      "n": 647,
+      "prob": 0.0024
+    },
+    {
+      "canton": "YACUAMBI",
+      "n": 52,
+      "prob": 0.0002
+    },
+    {
+      "canton": "YANTZAZA",
+      "n": 350,
+      "prob": 0.0013
+    },
+    {
+      "canton": "ZAMORA",
+      "n": 464,
+      "prob": 0.0017
+    },
+    {
+      "canton": "ZAPOTILLO",
+      "n": 100,
+      "prob": 0.0004
+    },
+    {
+      "canton": "ZARUMA",
+      "n": 210,
+      "prob": 0.0008
+    },
+    {
+      "n": 58,
+      "prob": 0.0002
+    }
+  ],
+  "total_eventos": [269066],
+  "periodo": {
+    "inicio": ["2025-11-01"],
+    "fin": ["2025-11-30"]
+  },
+  "validado": [true]
+}

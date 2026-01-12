@@ -1,0 +1,11 @@
+variable,tipo,descripcion
+fecha,Date,Fecha del incidente
+provincia,character,Provincia donde ocurrió
+canton,character,Cantón donde ocurrió
+cod_parroquia,character,Código de parroquia
+parroquia,character,Nombre de parroquia
+tipo_servicio,character,"Tipo de servicio (Seguridad, Salud, etc.)"
+subtipo,character,Subtipo del incidente
+hora,integer,Hora del incidente (Simulada/Calculada)
+dia_semana,ordered,Día de la semana
+dia_mes,integer,Día del mes
