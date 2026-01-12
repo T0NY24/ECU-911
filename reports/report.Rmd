@@ -24,10 +24,10 @@ Se realizó la limpieza del dataset original:
 
 -   Se estandarizaron los nombres de columnas.
 -   Se formatearon las fechas.
+-   Se removió toda simulación de hora para trabajar con datos reales.
+-   Se calcularon variables temporales (día de semana, día del mes, mes, año).
 
-**Nota:** Dado que la base pública original carecía de hora específica,
-se simuló la hora de llegada para cumplir con los requisitos de análisis
-temporal.
+**Importante:** Se ha eliminado la simulación de hora de los datos. El análisis se basa ahora completamente en información real de fechas, permitiendo análisis precisos de patrones temporales sin distorsión de datos simulados.
 
 # 2. Análisis Visual (Gráficos)
 
@@ -36,7 +36,7 @@ emergencias, basados en las imágenes generadas en la carpeta `/figures`.
 
 ## 2.1 Demanda en el tiempo
 
-Comportamiento de la llegada de incidentes por hora del día.
+Comportamiento de la llegada de incidentes por día del mes (basado en datos reales).
 
 ```{r demanda-tiempo, fig.align='center', out.width='80%'}
 # Cargamos la imagen ya generada
@@ -62,10 +62,26 @@ knitr::include_graphics("../figures/03_comparacion_subtipo.png")
 
 ## 2.4 Mapa de Calor (Heatmap)
 
-Intensidad de emergencias cruzando Hora del día vs. Día de la semana.
+Intensidad de emergencias cruzando Día de la semana vs. Tipo de servicio.
 
 ```{r heatmap, fig.align='center', out.width='80%'}
 knitr::include_graphics("../figures/04_heatmap.png")
+```
+
+## 2.5 Distribución por Día de la Semana
+
+Patrones de incidentes según el día de la semana (datos reales).
+
+```{r dia-semana, fig.align='center', out.width='80%'}
+knitr::include_graphics("../figures/05_distribucion_dia_semana.png")
+```
+
+## 2.6 Tendencia Temporal Semanal
+
+Comportamiento de los incidentes a lo largo de las semanas.
+
+```{r tendencia-semanal, fig.align='center', out.width='80%'}
+knitr::include_graphics("../figures/06_tendencia_semanal.png")
 ```
 
 # 3. Parámetros del Modelo
@@ -81,16 +97,20 @@ params <- fromJSON("../data/params.json")
 Los valores clave del modelo son:
 
 -   **Tasa de llegadas global (Lambda):**
-    `r round(params$tasa_llegada_lambda, 2)` llamadas/hora
--   **Tiempo promedio de atención (Supuesto):**
-    `r params$tiempos_atencion$promedio_atencion_minutos` minutos
--   **Validación de datos automática:** `r params$validacion_ok`
+    `r round(params$tasa_llegada_lambda, 2)` incidentes/día
+-   **Total de incidentes registrados:**
+    `r params$total_incidentes` incidentes
+-   **Período de análisis:** `r params$periodo$inicio` a `r params$periodo$fin` (`r params$periodo$total_dias` días)
+-   **Validación de datos:** `r if(params$validado) "✓ Completada" else "✗ Fallida"`
 
 # 4. Conclusiones del Avance
 
--   Se ha logrado limpiar la base de datos y generar un archivo
-    `dataset_limpio.csv` estructurado.
--   Las visualizaciones permiten identificar horas pico y los incidentes
-    más comunes.
--   Los parámetros de entrada para la simulación (tasas y
-    probabilidades) están listos.
+-   Se ha logrado limpiar la base de datos y generar un archivo `dataset_limpio.csv` estructurado con datos reales.
+-   **Se ha removido completamente la simulación de hora**, garantizando precisión en los análisis temporales.
+-   Las visualizaciones permiten identificar patrones reales de demanda por día de la semana y tipo de servicio.
+-   Los parámetros de entrada para la simulación (tasas de llegada y distribuciones) se basan en datos reales sin distorsión.
+-   El análisis ahora permite:
+    - **Analizar tiempos de respuesta** con datos precisos
+    - **Optimizar recursos** basado en patrones reales de demanda
+    - **Evaluar políticas de priorización** con información verificable
+    - **Predecir la demanda** sin sesgos de datos simulados

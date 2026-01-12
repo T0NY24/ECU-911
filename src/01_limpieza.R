@@ -21,14 +21,11 @@ clean_data <- raw_data %>%
     # Convertir fecha
     fecha = dmy(fecha),
     
-    # --- TRUCO IMPORTANTE ---
-    # Tu archivo NO tiene hora, pero el profesor pide "Llegadas por hora".
-    # Generamos una hora aleatoria (0 a 23) para poder hacer los gráficos obligatorios.
-    hora = sample(0:23, n(), replace = TRUE), 
-    
     # Crear día de la semana
     dia_semana = wday(fecha, label = TRUE, abbr = FALSE),
-    dia_mes = day(fecha)
+    dia_mes = day(fecha),
+    mes = month(fecha),
+    año = year(fecha)
   ) %>%
   filter(!is.na(fecha), !is.na(tipo_servicio))
 
@@ -48,12 +45,13 @@ diccionario <- data.frame(
     "Nombre de parroquia",
     "Tipo de servicio (Seguridad, Salud, etc.)",
     "Subtipo del incidente",
-    "Hora del incidente (Simulada/Calculada)", # Agregamos la descripción de la hora
     "Día de la semana",
-    "Día del mes"
+    "Día del mes",
+    "Mes del incidente",
+    "Año del incidente"
   )
 )
 
 write_csv(diccionario, "data/diccionario.csv")
 
-print("Limpieza completada y dataset guardado.")
+print("Limpieza completada y dataset guardado sin simulación de hora.")

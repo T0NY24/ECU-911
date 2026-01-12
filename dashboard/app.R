@@ -4,7 +4,6 @@ library(shinydashboard)
 library(tidyverse)
 
 # 1. Cargar datos (Busca el archivo en la carpeta data que está un nivel arriba)
-# Si te da error de ruta, asegúrate de que el archivo existe en ../data/dataset_limpio.csv
 tryCatch({
   data <- read_csv("../data/dataset_limpio.csv")
 }, error = function(e) {
@@ -25,8 +24,8 @@ ui <- dashboardPage(
       selectInput("filtro_servicio", "Filtrar por Servicio:", 
                   choices = c("Todos", unique(data$tipo_servicio))),
       
-      sliderInput("filtro_hora", "Rango de Horas:",
-                  min = 0, max = 23, value = c(0, 23))
+      selectInput("filtro_dia_semana", "Filtrar por Día de Semana:",
+                  choices = c("Todos", sort(unique(as.character(data$dia_semana)))))
     )
   ),
   
@@ -37,7 +36,7 @@ ui <- dashboardPage(
               fluidRow(
                 valueBoxOutput("kpi_total", width = 4),
                 valueBoxOutput("kpi_canton", width = 4),
-                valueBoxOutput("kpi_hora_pico", width = 4)
+                valueBoxOutput("kpi_dia_pico", width = 4)
               ),
               
               # --- SEGUNDA FILA: GRÁFICOS ---
@@ -45,8 +44,17 @@ ui <- dashboardPage(
                 box(title = "Top Subtipos de Emergencia (Filtrado)", status = "primary", solidHeader = TRUE,
                     plotOutput("plot_barras", height = 300)),
                 
-                box(title = "Tendencia Horaria", status = "warning", solidHeader = TRUE,
-                    plotOutput("plot_linea", height = 300))
+                box(title = "Distribución por Día de la Semana", status = "warning", solidHeader = TRUE,
+                    plotOutput("plot_dias", height = 300))
+              ),
+              
+              # --- TERCERA FILA: GRÁFICOS ADICIONALES ---
+              fluidRow(
+                box(title = "Incidentes por Tipo de Servicio", status = "success", solidHeader = TRUE,
+                    plotOutput("plot_servicio", height = 300)),
+                
+                box(title = "Tendencia Temporal", status = "info", solidHeader = TRUE,
+                    plotOutput("plot_tendencia", height = 300))
               )
       )
     )
@@ -58,11 +66,14 @@ server <- function(input, output) {
   
   # Filtro Reactivo: Se actualiza cuando mueves los controles
   data_filtrada <- reactive({
-    d <- data %>%
-      filter(hora >= input$filtro_hora[1] & hora <= input$filtro_hora[2])
+    d <- data
     
     if (input$filtro_servicio != "Todos") {
       d <- d %>% filter(tipo_servicio == input$filtro_servicio)
+    }
+    
+    if (input$filtro_dia_semana != "Todos") {
+      d <- d %>% filter(as.character(dia_semana) == input$filtro_dia_semana)
     }
     d
   })
@@ -87,14 +98,14 @@ server <- function(input, output) {
     )
   })
   
-  output$kpi_hora_pico <- renderValueBox({
-    top_hora <- data_filtrada() %>% count(hora, sort = TRUE) %>% slice(1) %>% pull(hora)
-    if(length(top_hora) == 0) top_hora <- 0
+  output$kpi_dia_pico <- renderValueBox({
+    top_dia <- data_filtrada() %>% count(dia_semana, sort = TRUE) %>% slice(1) %>% pull(dia_semana)
+    if(length(top_dia) == 0) top_dia <- "N/A"
     
     valueBox(
-      paste0(top_hora, ":00"), 
-      "Hora Pico", 
-      icon = icon("clock"), color = "blue"
+      as.character(top_dia), 
+      "Día Pico", 
+      icon = icon("calendar"), color = "blue"
     )
   })
   
@@ -110,14 +121,34 @@ server <- function(input, output) {
       theme_minimal()
   })
   
-  output$plot_linea <- renderPlot({
+  output$plot_dias <- renderPlot({
     data_filtrada() %>%
-      count(hora) %>%
-      ggplot(aes(x = hora, y = n)) +
-      geom_line(color = "darkred", size = 1.2) +
+      count(dia_semana) %>%
+      ggplot(aes(x = dia_semana, y = n)) +
+      geom_col(fill = "darkred") +
+      labs(x = "Día de la Semana", y = "Cantidad de Incidentes") +
+      theme_minimal() +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  })
+  
+  output$plot_servicio <- renderPlot({
+    data_filtrada() %>%
+      count(tipo_servicio) %>%
+      ggplot(aes(x = reorder(tipo_servicio, n), y = n, fill = tipo_servicio)) +
+      geom_col(show.legend = FALSE) +
+      coord_flip() +
+      labs(x = "", y = "Cantidad") +
+      theme_minimal()
+  })
+  
+  output$plot_tendencia <- renderPlot({
+    data_filtrada() %>%
+      mutate(semana = lubridate::week(fecha)) %>%
+      count(semana) %>%
+      ggplot(aes(x = semana, y = n)) +
+      geom_line(color = "darkgreen", size = 1) +
       geom_point() +
-      scale_x_continuous(breaks = 0:23) +
-      labs(x = "Hora", y = "Cantidad") +
+      labs(x = "Semana", y = "Cantidad de Incidentes") +
       theme_minimal()
   })
 }
